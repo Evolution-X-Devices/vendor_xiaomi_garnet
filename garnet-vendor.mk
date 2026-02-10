@@ -1773,7 +1773,7 @@ PRODUCT_PACKAGES += \
     libMIAIHDR_skel \
     libQnnHtpV69 \
     libQnnHtpV69Skel \
-    libQnnSaver \
+    libQnnSaver_adsp \
     libSnpeDspV65Skel \
     libSnpeDspV66Skel \
     libSnpeHtpV68Skel \
