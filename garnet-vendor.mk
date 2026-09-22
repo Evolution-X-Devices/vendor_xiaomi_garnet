@@ -830,7 +830,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/garnet/proprietary/vendor/firmware/vpu20_1v.mbn:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_1v.mbn \
     vendor/xiaomi/garnet/proprietary/vendor/firmware/vpu20_1v.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_1v.mdt \
     vendor/xiaomi/garnet/proprietary/vendor/gpu/kbc/sequence_manifest.bin:$(TARGET_COPY_OUT_VENDOR)/gpu/kbc/sequence_manifest.bin \
-    vendor/xiaomi/garnet/proprietary/vendor/gpu/kbc/unified_kbcs_32.bin:$(TARGET_COPY_OUT_VENDOR)/gpu/kbc/unified_kbcs_32.bin \
     vendor/xiaomi/garnet/proprietary/vendor/gpu/kbc/unified_kbcs_64.bin:$(TARGET_COPY_OUT_VENDOR)/gpu/kbc/unified_kbcs_64.bin \
     vendor/xiaomi/garnet/proprietary/vendor/gpu/kbc/unified_ksqs.bin:$(TARGET_COPY_OUT_VENDOR)/gpu/kbc/unified_ksqs.bin \
     vendor/xiaomi/garnet/proprietary/vendor/lib64/camera/com.qti.sensormodule.garnet_aac_ov64b40_wide_i.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.sensormodule.garnet_aac_ov64b40_wide_i.bin \
@@ -872,27 +871,6 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     vendor.qti.diaghal-V1-ndk \
-    eglSubDriverAndroid \
-    libEGL_adreno \
-    libGLESv1_CM_adreno \
-    libGLESv2_adreno \
-    libVkLayer_ADRENO_qprofiler \
-    libq3dtools_adreno \
-    libq3dtools_esx \
-    libCB \
-    libOpenCL \
-    libadreno_app_profiles \
-    libadreno_utils \
-    libgpudataproducer \
-    libgsl \
-    libkcl \
-    libkernelmanager \
-    libllvm-glnext \
-    libllvm-qcom \
-    libllvm-qgl \
-    libvmmem \
-    vendor.qti.qspmhal@1.0-impl \
-    vendor.qti.qspmhal@1.0 \
     android.hardware.secure_element@1.0-impl \
     btaudio_offload_if \
     com.qti.actuator.garnet_aac_ov64b40_dw9800v_wide_i_actuator \
@@ -1101,6 +1079,13 @@ PRODUCT_PACKAGES += \
     com.qualcomm.qti.uceservice@2.2 \
     com.qualcomm.qti.uceservice@2.3 \
     deviceInfoServiceModuleNr \
+    eglSubDriverAndroid \
+    libEGL_adreno \
+    libGLESv1_CM_adreno \
+    libGLESv2_adreno \
+    libVkLayer_ADRENO_qprofiler \
+    libq3dtools_adreno \
+    libq3dtools_esx \
     android.hardware.bluetooth@1.0-impl-qti \
     android.hardware.gatekeeper@1.0-impl-qti \
     android.hardware.gnss-aidl-impl-qti \
@@ -1140,6 +1125,7 @@ PRODUCT_PACKAGES += \
     lib-rtpcore \
     lib-rtpsl \
     libAF \
+    libCB \
     libEvrcSwCodec \
     libGPQTEEC_vendor \
     libGPTEE_vendor \
@@ -1148,6 +1134,7 @@ PRODUCT_PACKAGES += \
     libHISCppAlgos \
     libMiMotion \
     libMiVDR \
+    libOpenCL \
     libPlatformValidatorShared \
     libQSEEComAPI \
     libQTEEConnector_listener \
@@ -1199,6 +1186,8 @@ PRODUCT_PACKAGES += \
     libXMFaceFocus \
     lib_misound_asc \
     libadm \
+    libadreno_app_profiles \
+    libadreno_utils \
     libadsp_default_listener \
     libadsprpc \
     libagm \
@@ -1319,7 +1308,9 @@ PRODUCT_PACKAGES += \
     libgnss \
     libgnsspps \
     libgps.utils \
+    libgpudataproducer \
     libgrpc++_unsecure_prebuilt \
+    libgsl \
     libhdr10plus \
     libhdr_backlight_adapter \
     libhdr_tm \
@@ -1337,11 +1328,16 @@ PRODUCT_PACKAGES += \
     libjnihelper \
     libjpege \
     libkaraokepal \
+    libkcl \
+    libkernelmanager \
     libkeymasterdeviceutils \
     libkeymasterprovision \
     libkeymasterutils \
     liblbs_core \
     liblistensoundmodel2vendor \
+    libllvm-glnext \
+    libllvm-qcom \
+    libllvm-qgl \
     libloc_api_v02 \
     libloc_api_wds \
     libloc_base_util \
@@ -1582,6 +1578,7 @@ PRODUCT_PACKAGES += \
     libvidhance_ldc \
     libvidhance_stabilizer \
     libvidhance_super_stabilization \
+    libvmmem \
     libwms \
     libwqe \
     libwvhidl \
@@ -1753,6 +1750,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.qesdhal@1.1-impl \
     vendor.qti.qesdhal@1.1 \
     vendor.qti.qesdsys-V1-ndk_platform \
+    vendor.qti.qspmhal@1.0-impl \
+    vendor.qti.qspmhal@1.0 \
     vendor.xiaomi.hardware.bgservice@1.0-impl \
     vendor.xiaomi.hardware.bgservice@1.0 \
     vendor.xiaomi.hardware.campostproc@1.0-service-impl \
@@ -1997,7 +1996,6 @@ PRODUCT_PACKAGES += \
     shsusrd \
     slim_daemon \
     sscrpcd \
-    ssgqmigd \
     ssgqmigd64 \
     ssgtzd \
     ssr_diag \
@@ -2019,9 +2017,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     system_ext_priv-app_ims_lib_arm64_libimscamera_jni_so \
     system_ext_priv-app_ims_lib_arm64_libimsmedia_jni_so \
-    vendor_lib_libEGL_adreno_so \
-    vendor_lib_libGLESv2_adreno_so \
-    vendor_lib_libq3dtools_adreno_so \
     vendor_lib64_libEGL_adreno_so \
     vendor_lib64_libGLESv2_adreno_so \
     vendor_lib64_libq3dtools_adreno_so
